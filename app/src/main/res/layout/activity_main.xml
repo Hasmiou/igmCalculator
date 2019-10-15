@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".views.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Poids" />
+                        android:text="Poids (kg)" />
 
                     <EditText
                         android:id="@+id/txtPoids"
@@ -87,7 +87,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Taille" />
+                        android:text="Taille (cm)" />
 
                     <EditText
                         android:id="@+id/txtTaille"
@@ -156,11 +156,10 @@
                 app:srcCompat="@drawable/ic" />
 
             <TextView
-                android:id="@+id/txtMessage"
+                android:id="@+id/txtResult"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Message" />
+                android:layout_weight="1" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
