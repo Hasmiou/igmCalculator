@@ -1,6 +1,9 @@
 package com.sdz.hasmiou.igmcalculator.models;
 
-public class Profil {
+import java.io.Serializable;
+
+public class Profil implements Serializable {
+
     private Integer poids;
     private Integer taille;
     private Integer age;
@@ -13,7 +16,15 @@ public class Profil {
     private static final Integer minHomme = 10;
     private static final Integer maxHomme = 25;
 
-
+    /**
+     * Le constructeur, qui assigne automatiquement le valeurs de chaque attribut
+     * puis appele les fonction de calcule de l'img et de la génération du message associé
+     *
+     * @param poids
+     * @param taille
+     * @param age
+     * @param sex
+     */
     public Profil(Integer poids, Integer taille, Integer age, Integer sex) {
         this.poids = poids;
         this.taille = taille;
@@ -24,7 +35,7 @@ public class Profil {
     }
 
     /**
-     *
+     * Calcule l'img et affecte la valeur à l'attribut de la classe
      */
     private void calculImg(){
         float tailleMetre = (float) taille/100;
@@ -32,7 +43,7 @@ public class Profil {
     }
 
     /**
-     *
+     * Génere le message associé à l'img puis assigne la valeur à l'attribut de la classe.
      */
     private void generateMessage(){
         Integer min;
@@ -56,26 +67,50 @@ public class Profil {
 
     }
 
+    /**
+     * Getter de l'img
+     * @return
+     */
     public float getImg() {
         return img;
     }
 
+    /**
+     * Getter du poids
+     * @return
+     */
     public Integer getPoids() {
         return poids;
     }
 
+    /**
+     * Getter de la taile
+     * @return
+     */
     public Integer getTaille() {
         return taille;
     }
 
+    /**
+     * Getter de l'age
+     * @return
+     */
     public Integer getAge() {
         return age;
     }
 
+    /**
+     * Getter du genre
+     * @return
+     */
     public Integer getSex() {
         return sex;
     }
 
+    /**
+     * Getter du message
+     * @return
+     */
     public String getMessage() {
         return message;
     }
